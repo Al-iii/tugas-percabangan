@@ -12,9 +12,9 @@ public class TugasPercabangan {
         int jamKerjaPerHari = 8;  // Jam kerja normal per hari
         int jamKerjaPerMinggu = 40;  // Jam kerja normal per minggu
         int uangLemburPerJam = 50000;  // Uang lembur per jam
-         // Hitung jumlah jam lembur dalam 1 bulan (dianggap 4 minggu dalam sebulan)
-        int jamNormalSebulan = jamKerjaPerMinggu * 4;  // 40 jam kerja per minggu x 4 minggu
-        int jamLembur = totalJamKerja - jamNormalSebulan;
+        int jamLembur;
+        int jamNormalSebulan;
+        
 
         // Input masa kerja dan jumlah jam kerja dari user
         System.out.print("Masukkan masa kerja (dalam tahun): ");
@@ -22,6 +22,10 @@ public class TugasPercabangan {
 
         System.out.print("Masukkan total jam kerja dalam 1 bulan: ");
         totalJamKerja = scanner.nextInt();
+
+         // Hitung jumlah jam lembur dalam 1 bulan (dianggap 4 minggu dalam sebulan)
+        jamNormalSebulan = jamKerjaPerMinggu * 4;  // 40 jam kerja per minggu x 4 minggu
+        jamLembur = totalJamKerja - jamNormalSebulan;
 
         // Hitung tambahan gaji berdasarkan masa kerja
         if (masaKerja >= 5 && masaKerja <= 10) {
